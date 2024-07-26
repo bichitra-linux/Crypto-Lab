@@ -1,6 +1,6 @@
-from Crypto.Cipher import DES
-from Crypto.Util.Padding import pad, unpad
-from Crypto.Random import get_random_bytes
+from crypto.Cipher import DES
+from crypto.Util.Padding import pad, unpad
+from crypto.Random import get_random_bytes
 
 
 # Function to perform DES encryption

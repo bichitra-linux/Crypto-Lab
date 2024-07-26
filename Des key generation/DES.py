@@ -1,7 +1,6 @@
-from crypto.Cipher import DES
-from crypto.Util.Padding import pad, unpad
-from crypto.Random import get_random_bytes
-
+from Crypto.Cipher import DES
+from Crypto.Util.Padding import pad, unpad
+from Crypto.Random import get_random_bytes
 
 # Function to perform DES encryption
 def des_encrypt(plain_text, key):
@@ -12,7 +11,6 @@ def des_encrypt(plain_text, key):
     encrypted_text = cipher.encrypt(padded_text)
     return encrypted_text
 
-
 # Function to perform DES decryption
 def des_decrypt(encrypted_text, key):
     # Ensure key is 8 bytes long
@@ -21,7 +19,6 @@ def des_decrypt(encrypted_text, key):
     decrypted_padded_text = cipher.decrypt(encrypted_text)
     decrypted_text = unpad(decrypted_padded_text, DES.block_size)
     return decrypted_text.decode()
-
 
 # Example usage
 if __name__ == "__main__":
